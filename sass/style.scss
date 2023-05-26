@@ -215,7 +215,7 @@ $measure: 1rem;
     text-align: center;
     &__hd{
         &__media{
-
+            padding: 20px 60px;
         }
         &__title{
             @include font-d;
@@ -225,6 +225,29 @@ $measure: 1rem;
     }
     &__bd{
 
+    }
+}
+
+.b--cta-a{
+    background-color: $color-e;
+    padding: $measure*5 $measure*6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none!important;
+    &__text{
+        @include font-c;
+        color: $color-b;
+    }
+    &__media{
+        max-height: 100px;
+        transition: all .3s ease-in-out;
+    }
+    &:hover &{
+        &__media{
+            transform: translateX(10px);
+            transition: all .3s ease-in-out;
+        }
     }
 }
 

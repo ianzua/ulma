@@ -393,6 +393,9 @@ p {
   padding: 0 30px;
   text-align: center;
 }
+.b--card-a__hd__media {
+  padding: 20px 60px;
+}
 .b--card-a__hd__title {
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-size: 24px;
@@ -406,6 +409,35 @@ p {
     font-size: 18px;
   }
 }
+.b--cta-a {
+  background-color: #f3f2f2;
+  padding: 5rem 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none !important;
+}
+.b--cta-a__text {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #ee260c;
+}
+@media (max-width: 960px) {
+  .b--cta-a__text {
+    font-size: 28px;
+  }
+}
+.b--cta-a__media {
+  max-height: 100px;
+  transition: all 0.3s ease-in-out;
+}
+.b--cta-a:hover .b--cta-a__media {
+  transform: translateX(10px);
+  transition: all 0.3s ease-in-out;
+}
+
 .b--footer-a {
   padding: 4% 4rem;
   background-color: #212121;
