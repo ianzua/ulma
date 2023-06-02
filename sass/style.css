@@ -258,6 +258,10 @@ p {
 
 .b--header-a {
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-top: 0;
   width: 100%;
   background-color: #fff;
   padding: 3rem 4rem;
@@ -387,6 +391,16 @@ p {
 .b--header-a__content__lang__text a:hover {
   color: #212121;
   text-decoration: none;
+}
+
+.b--hero-a {
+  margin-top: 155px;
+  height: calc(100vh - 155px);
+  width: 100vw;
+  overflow: hidden;
+}
+.b--hero-a__media {
+  bottom: 0;
 }
 
 .b--card-a {

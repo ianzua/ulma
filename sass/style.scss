@@ -124,6 +124,8 @@ $measure: 1rem;
 // Header
 .b--header-a{
     position: fixed;
+    top: 0; left: 0; right: 0;
+    margin-top: 0;
     width: 100%;
     background-color: $color-c;
     padding: $measure*3 $measure*4;
@@ -207,6 +209,17 @@ $measure: 1rem;
                 }
             }
         }
+    }
+}
+
+//Hero
+.b--hero-a{
+    margin-top: 155px;
+    height: calc(100vh - 155px);
+    width: 100vw;
+    overflow: hidden;
+    &__media{
+        bottom: 0;
     }
 }
 
