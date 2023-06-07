@@ -41,6 +41,8 @@ $measure: 1rem;
 .f--font-d{@include font-d;}
 .f--font-e{@include font-e;}
 
+strong{font-weight: 700!important;}
+
 // Margins
 .f--mb-24{margin-bottom: 24px;}
 .f--mb-32{margin-bottom: 32px;}
@@ -53,13 +55,13 @@ $measure: 1rem;
 
 // Sections
 .f--section-a{
-    padding: 8% 0 10% 0;
+    padding: 4% 0 6% 0;
 }
 .f--section-b{
     padding: 12% 0 0 0;
 }
 .f--section-c{
-    padding: 0 0 8% 0;
+    padding: 0 0 4% 0;
 }
 .f--section-d{
     padding: 8% 0 4% 0;
@@ -166,25 +168,17 @@ $measure: 1rem;
         justify-content: flex-end;
         align-items: center;
         height: 100%;
-        &__phone{
-            @include font-e();
-            font-weight: bold;
-            color: $color-b;
-            text-decoration: none!important;
-            @media (max-width: 960px){
-                font-size: 12px;
-            }
-            &:hover{
-                color: $color-c;
-            }
+       &__social{
+        display: inline-flex;
+        &__link{
+            display: block;
+            margin-left: $measure*0.5;
             &__icon{
-                max-width: 24px;
-                margin-right: 8px;
-                @media (max-width: 960px){
-                    max-width: 16px;
-                }
+                max-width: $measure*2
             }
         }
+        
+       }
         &__lang{
             margin-right: 32px;
             @media (max-width: 960px){
@@ -223,24 +217,79 @@ $measure: 1rem;
     }
 }
 
+//card
 .b--card-a{
     padding: 0 30px;
     text-align: center;
     &__hd{
-        &__media{
-            padding: 20px 60px;
+        padding-bottom: $measure;
+        border-bottom: 4px $color-a solid; 
+        &:hover &{
+            &__media-wrapper{
+                transform: scale(1.2);
+                transition: all .3s ease-in-out;
+            }
+        }
+        &__media-wrapper{
+            display: block;
+            padding: $measure*2 $measure*4 $measure*0.5 $measure*4;
+            transition: all .3s ease-in-out;
         }
         &__title{
-            @include font-d;
+            @include font-d();
             color: $color-b;
             font-weight: 600;
         }
     }
     &__bd{
-
+        margin-top: $measure*1.5;
+        &__text{
+            @include font-e();
+        }
     }
 }
 
+.b--card-b{
+    background-color: $color-d;
+    padding: $measure*2;
+    p{
+        @include font-c();
+    }
+}
+
+.b--card-c{
+    background-color: $color-e;
+    padding: $measure*3 $measure*6 $measure*2 $measure*6;
+    margin-bottom: 4%;
+    &__text{
+        @include font-d();
+        text-align: center;
+    }
+    &__media{
+        margin-top: $measure*2;
+    }
+}
+
+//list
+.b--list-a{
+    list-style: none!important;
+    padding-left: $measure!important;
+    margin-top: $measure*1.5;
+    &__list-item{
+        display: inline-flex;
+        align-items: top;
+        @include font-d;
+        margin-bottom: $measure;
+        &__icon{
+            display: block;
+            max-width: 35px;
+            max-height: 35px;
+            margin-right: $measure;
+        }
+    }
+}
+
+//cta
 .b--cta-a{
     background-color: $color-e;
     padding: $measure*5 $measure*6;
@@ -264,20 +313,27 @@ $measure: 1rem;
     }
 }
 
+//footer
 .b--footer-a{
-    padding: 4% $measure*4;
-    background-color: $color-a;
-    @media (max-width: 960px){
-        padding: 4% 0px;
-    }
     &__main{
+        background-color: $color-a;
+        padding: $measure*4 4%;
+        @media (max-width: 960px){
+            padding: 4% 0px;
+        }
         &__logo{
-            max-height: 60px;
-            @media (max-width: 960px){
-                max-height: 30px;
-            }
+            height: 100%;
+            display: flex;
+            justify-content: end;
+            align-items: end;
             &__link{
-                display: block;
+                display: flex;
+                justify-content: end;
+                align-items: end;
+                max-height: 60px;
+                @media (max-width: 960px){
+                    max-height: 30px;
+                }
                 &__media{
                     max-height: 60px;
                     @media (max-width: 960px){
@@ -285,13 +341,35 @@ $measure: 1rem;
                     }
                 }
             }
+            
+        }
+        &__content{
+            p{
+                color: $color-c;
+                @include font-e();
+                a{
+                    color: $color-c;
+                    &:hover{
+                        color: #ee260c;
+                    }
+                }
+            }
         }
     }
-    &__wrapper{
-        display: flex;
-        justify-content: flex-end;
-        &__media{
-            margin-left: $measure*4;
+    &__bottom{
+        padding: 1% $measure*4;
+        &__text{
+            @include font-e();
+        }
+        &__legal{
+            text-align: right;
+            @include font-e();
+            a{
+                color:$color-a;
+                &:hover{
+                    color: #ee260c;
+                }
+            }
         }
     }
 }
