@@ -381,9 +381,11 @@ strong {
   height: calc(100vh - 155px);
   width: 100vw;
   overflow: hidden;
+  background-color: #ee260c;
 }
 .b--hero-a__media {
   bottom: 0;
+  background-color: #ee260c !important;
 }
 
 .b--card-a {

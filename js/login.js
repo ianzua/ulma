@@ -4,8 +4,8 @@ var objPeople = [
         password : "1234"
     },
     {
-        username : "jon",
-        password : "zubaizu"
+        username : "ulma",
+        password : "1234"
     }
 ]
 

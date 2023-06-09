@@ -212,8 +212,10 @@ strong{font-weight: 700!important;}
     height: calc(100vh - 155px);
     width: 100vw;
     overflow: hidden;
+    background-color: #e43340;
     &__media{
         bottom: 0;
+        background-color: #e43340!important;
     }
 }
 
@@ -224,6 +226,13 @@ strong{font-weight: 700!important;}
     &__hd{
         padding-bottom: $measure;
         border-bottom: 4px $color-a solid; 
+        min-height: 405px;
+        @media (max-width: 1400px){
+            min-height: 345px;
+        }
+        @media (max-width: 992px){
+            min-height: auto;
+        }
         &:hover &{
             &__media-wrapper{
                 transform: scale(1.2);
@@ -233,7 +242,12 @@ strong{font-weight: 700!important;}
         &__media-wrapper{
             display: block;
             padding: $measure*2 $measure*4 $measure*0.5 $measure*4;
-            transition: all .3s ease-in-out;
+                transition: all .3s ease-in-out;    
+            &__media{
+                @media (max-width: 992px){
+                    max-height: $measure*8;
+                }
+            }
         }
         &__title{
             @include font-d();

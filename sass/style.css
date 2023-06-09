@@ -381,9 +381,11 @@ strong {
   height: calc(100vh - 155px);
   width: 100vw;
   overflow: hidden;
+  background-color: #e43340;
 }
 .b--hero-a__media {
   bottom: 0;
+  background-color: #e43340 !important;
 }
 
 .b--card-a {
@@ -393,6 +395,17 @@ strong {
 .b--card-a__hd {
   padding-bottom: 1rem;
   border-bottom: 4px #212121 solid;
+  min-height: 405px;
+}
+@media (max-width: 1400px) {
+  .b--card-a__hd {
+    min-height: 345px;
+  }
+}
+@media (max-width: 992px) {
+  .b--card-a__hd {
+    min-height: auto;
+  }
 }
 .b--card-a__hd:hover .b--card-a__hd__media-wrapper {
   transform: scale(1.2);
@@ -402,6 +415,11 @@ strong {
   display: block;
   padding: 2rem 4rem 0.5rem 4rem;
   transition: all 0.3s ease-in-out;
+}
+@media (max-width: 992px) {
+  .b--card-a__hd__media-wrapper__media {
+    max-height: 8rem;
+  }
 }
 .b--card-a__hd__title {
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
