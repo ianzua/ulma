@@ -226,6 +226,9 @@ strong{font-weight: 700!important;}
     &__hd{
         padding-bottom: $measure;
         border-bottom: 4px $color-a solid; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         min-height: 405px;
         @media (max-width: 1400px){
             min-height: 345px;
@@ -235,7 +238,7 @@ strong{font-weight: 700!important;}
         }
         &:hover &{
             &__media-wrapper{
-                transform: scale(1.2);
+                transform: scale(1.1);
                 transition: all .3s ease-in-out;
             }
         }
@@ -257,8 +260,19 @@ strong{font-weight: 700!important;}
     }
     &__bd{
         margin-top: $measure*1.5;
+        opacity: 0;
+        transition: all .3s ease-in-out;
+        @media (max-width: 960px){
+            opacity: 1;
+        }
         &__text{
             @include font-e();
+        }
+    }
+    &:hover &{
+        &__bd{
+            opacity: 1;
+            transition: all .3s ease-in-out;
         }
     }
 }
