@@ -1,12 +1,36 @@
 var objPeople = [
     {
-        username : "irati",
+        username : "ulma",
         password : "1234"
     },
     {
-        username : "ulma",
+        username : "bralo",
         password : "1234"
-    }
+    },
+    {
+        username : "catelsa",
+        password : "1234"
+    },
+    {
+        username : "tello",
+        password : "1234"
+    },
+    {
+        username : "finsa",
+        password : "1234"
+    },
+    {
+        username : "glaxo",
+        password : "1234"
+    },
+    {
+        username : "vemare",
+        password : "1234"
+    },
+    {
+        username : "felixsolis",
+        password : "1234"
+    },
 ]
 
 function getInfo(){

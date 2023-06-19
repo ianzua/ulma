@@ -133,33 +133,40 @@ strong{font-weight: 700!important;}
     padding: $measure*3 $measure*4;
     z-index: 300;
     @media (max-width: 960px){
-        padding: $measure*1.5 0px;
+        padding: $measure*1.2 $measure;
         margin: 0px;
-        height: 78px;
     }
     &__main{
         display: flex;
         flex-direction: row;
         justify-content: start;
         align-items: end;
+        @media (max-width: 960px){
+            justify-content: center;
+        }
         &__logo{
             max-height: 60px;
             @media (max-width: 960px){
-                max-height: 30px;
+                max-height: 60px;
             }
             &__link{
                 display: block;
                 &__media{
                     max-height: 60px;
                     @media (max-width: 960px){
-                        max-height: 30px;
+                        max-height: 60px;
                     }
                 }
             }
         }
         &__tagline{
             margin-left: 40px;
+            width: auto;
             @include font-d;
+            @media (max-width: 960px){
+                margin-left: 30px;
+                font-size: 14px;
+            }
         }
     }
     
@@ -168,13 +175,19 @@ strong{font-weight: 700!important;}
         justify-content: flex-end;
         align-items: center;
         height: 100%;
+        @media (max-width: 960px){
+            margin-top: $measure*0.5;
+        }
        &__social{
         display: inline-flex;
         &__link{
             display: block;
             margin-left: $measure*0.5;
             &__icon{
-                max-width: $measure*2
+                max-width: $measure*2;
+                @media (max-width: 960px){
+                    max-width: $measure*1.5;
+                }
             }
         }
         
@@ -183,6 +196,7 @@ strong{font-weight: 700!important;}
             margin-right: 32px;
             @media (max-width: 960px){
                 margin-left: 12px;
+                margin-right: $measure;
             }
             &__text{
                 @include font-e();
@@ -213,6 +227,10 @@ strong{font-weight: 700!important;}
     width: 100vw;
     overflow: hidden;
     background-color: #e43340;
+    @media (max-width: 960px){
+        margin-top: 127px;
+        height: auto;
+    }
     &__media{
         bottom: 0;
         background-color: #e43340!important;
@@ -280,6 +298,9 @@ strong{font-weight: 700!important;}
 .b--card-b{
     background-color: $color-d;
     padding: $measure*2;
+    @media (max-width: 960px){
+        margin-bottom: $measure*2;
+    }
     p{
         @include font-c();
     }
@@ -289,6 +310,9 @@ strong{font-weight: 700!important;}
     background-color: $color-e;
     padding: $measure*3 $measure*6 $measure*2 $measure*6;
     margin-bottom: 4%;
+    @media (max-width: 960px){
+        padding: $measure*2 $measure*1 $measure*2 $measure*1;
+    }
     &__text{
         @include font-d();
         text-align: center;
@@ -313,6 +337,11 @@ strong{font-weight: 700!important;}
             max-width: 35px;
             max-height: 35px;
             margin-right: $measure;
+            @media (max-width: 960px){
+                max-width: 20px;
+                max-height: 20px;
+                margin-top: 2px;
+            }
         }
     }
 }
@@ -325,6 +354,9 @@ strong{font-weight: 700!important;}
     justify-content: space-between;
     align-items: center;
     text-decoration: none!important;
+    @media (max-width: 960px){
+        padding: $measure*2 $measure*2;
+    }
     &__text{
         @include font-c;
         color: $color-b;
@@ -337,6 +369,9 @@ strong{font-weight: 700!important;}
         &__media{
             transform: translateX(10px);
             transition: all .3s ease-in-out;
+            @media (max-width: 960px){
+                transform: translateX(0px);
+            }
         }
     }
 }
@@ -347,25 +382,30 @@ strong{font-weight: 700!important;}
         background-color: $color-a;
         padding: $measure*4 4%;
         @media (max-width: 960px){
-            padding: 4% 0px;
+            padding: $measure*3 0px;
         }
         &__logo{
             height: 100%;
             display: flex;
             justify-content: end;
             align-items: end;
+            @media (max-width: 960px){
+                display: block;
+                margin-top: $measure*2;
+            }
             &__link{
                 display: flex;
                 justify-content: end;
                 align-items: end;
                 max-height: 60px;
                 @media (max-width: 960px){
-                    max-height: 30px;
+                    max-height: 60px;
+                    display: block;
                 }
                 &__media{
                     max-height: 60px;
                     @media (max-width: 960px){
-                        max-height: 30px;
+                        max-height: 60px;
                     }
                 }
             }
@@ -386,12 +426,19 @@ strong{font-weight: 700!important;}
     }
     &__bottom{
         padding: 1% $measure*4;
+        @media (max-width: 960px){
+            padding: $measure*2 0px;
+        }
         &__text{
             @include font-e();
         }
         &__legal{
             text-align: right;
             @include font-e();
+            @media (max-width: 960px){
+                text-align: left;
+                margin-top: $measure;
+            }
             a{
                 color:$color-a;
                 &:hover{
