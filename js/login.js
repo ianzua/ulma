@@ -1,35 +1,35 @@
 var objPeople = [
     {
         username : "ulma",
-        password : "1234"
+        password : "ulmarenewal"
     },
     {
         username : "bralo",
-        password : "1234"
+        password : "ulmarenewal"
     },
     {
         username : "catelsa",
-        password : "1234"
+        password : "ulmarenewal"
     },
     {
         username : "tello",
-        password : "1234"
+        password : "ulmarenewal"
     },
     {
         username : "finsa",
-        password : "1234"
+        password : "ulmarenewal"
     },
     {
         username : "glaxo",
-        password : "1234"
+        password : "ulmarenewal"
     },
     {
         username : "vemare",
-        password : "1234"
+        password : "ulmarenewal"
     },
     {
         username : "felixsolis",
-        password : "1234"
+        password : "ulmarenewal"
     },
 ]
 
